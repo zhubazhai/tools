@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name       导出国际化词条 Excel
+// @name       导出国际化词条(新方舟)
 // @namespace    http://your-namespace.com
 // @version      1.0
 // @author       mlf
