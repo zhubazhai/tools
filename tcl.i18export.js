@@ -3,7 +3,7 @@
 // @namespace    http://your-namespace.com
 // @version     1.2.2
 // @author      menglingfeng
-// @description  导出国际化词条 Excel
+// @description   Excel
 // @require      https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js
 // @require      https://greasyfork.org/scripts/430412-chinese-conversion-api/code/Chinese%20Conversion%20API.js?version=957744
 // @grant        none
