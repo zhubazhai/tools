@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       导出国际化词条(新方舟)
 // @namespace    http://your-namespace.com
-// @version      1.0
+// @version     1.2.1
 // @author       mlf
 // @description  导出国际化词条 Excel
 // @require      https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js
@@ -31,7 +31,7 @@
       vals = JSON.parse(data);
     }
     if (!Array.isArray(vals)) {
-      alert("值接受数组");
+      alert("只接受数组");
       return;
     }
     console.warn("获得的词条", vals);
