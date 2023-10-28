@@ -43,10 +43,10 @@
         "*类型": "front",
         "*分组": groupkey,
         "*内容(zh_CN)": val,
-        "*内容(hk_CN)": sc2tc(val), // 将内容(hk_CN)转为繁体中文
+        "*内容(zh_HK)": sc2tc(val), // 将内容(zh_HK)转为繁体中文
         "*内容(en_US)": keys.replace(/_([a-z])/g, function (match, letter) {
           return letter.toUpperCase();
-        }) // 使用 val 的值作为 *内容(en_US)
+        }), // 使用 val 的值作为 *内容(en_US)
       };
     });
 
@@ -57,8 +57,8 @@
           "*类型": obj["*类型"],
           "*分组": obj["*分组"],
           "*内容(zh_CN)": obj["*内容(zh_CN)"],
-          "*内容(hk_CN)": obj["*内容(hk_CN)"],
-          "*内容(en_US)": obj["*内容(en_US)"]
+          "*内容(zh_HK)": obj["*内容(zh_HK)"],
+          "*内容(en_US)": obj["*内容(en_US)"],
         };
       });
 
@@ -69,7 +69,7 @@
 
       const excelBuffer = XLSX.write(workbook, { type: "array" });
       const blob = new Blob([excelBuffer], {
-        type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
       });
 
       const link = document.createElement("a");
